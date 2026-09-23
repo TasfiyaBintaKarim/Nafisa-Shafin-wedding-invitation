@@ -99,7 +99,8 @@ a { color: inherit; text-decoration: none; }
 .envelope:hover { transform: translateY(-6px) rotateX(2deg); }
 .envelope-back, .envelope-front { position: absolute; inset: 0; border-radius: 3px; background: #7b303b; box-shadow: 0 16px 26px rgba(33, 14, 19, .32); }
 .envelope-back::before { content: ""; position: absolute; inset: 0; opacity: .4; background-image: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(78,95,77,.07) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,.18) 3px); }
-.envelope-letter { position: absolute; z-index: 2; width: 80%; height: 260px; top: -32px; left: 10%; padding: 15px; background: #f6f0df; box-shadow: 0 5px 15px rgba(26,36,28,.14); transition: transform .72s cubic-bezier(.23,1,.32,1), top .72s cubic-bezier(.23,1,.32,1); }
+.envelope-letter { position: absolute; z-index: 2; width: 80%; height: 260px; top: -32px; left: 10%; padding: 15px; background: #f6f0df; box-shadow: 0 5px 15px rgba(26,36,28,.14); transform-origin: bottom center; transform-style: preserve-3d; transition: transform .72s cubic-bezier(.23,1,.32,1), top .72s cubic-bezier(.23,1,.32,1); }
+.envelope-letter::after { content: ""; position: absolute; left: 15px; right: 15px; top: 50%; border-top: 1px dashed rgba(169,135,96,.35); opacity: 0; transform: scaleX(.78); transition: opacity .25s .12s, transform .72s cubic-bezier(.23,1,.32,1); pointer-events: none; }
 .letter-inner { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid rgba(169,135,96,.34); color: #30483f; }
 .letter-eyebrow, .letter-place { font-size: 8px; letter-spacing: .2em; text-transform: uppercase; }
 .letter-letter {}
@@ -116,7 +117,8 @@ a { color: inherit; text-decoration: none; }
 .open-prompt { position: absolute; top: 308px; bottom: auto; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 10px; color: #e1e9dc; background: transparent; font-size: 10px; text-transform: uppercase; letter-spacing: .19em; white-space: nowrap; }
 .open-prompt svg { transition: transform .2s ease; }
 .open-prompt:hover svg { transform: translateY(4px); }
-.envelope-stage.is-open .envelope-letter { top: -118px; transform: translateY(-38px); }
+.envelope-stage.is-open .envelope-letter { top: -118px; transform: translateY(-38px) rotateX(-11deg) rotateZ(-1deg); }
+.envelope-stage.is-open .envelope-letter::after { opacity: .72; transform: scaleX(1); }
 .envelope-stage.is-open .envelope-flap { transform: rotateX(180deg); }
 .envelope-stage.is-open .envelope-seal { opacity: 0; transform: translateY(90px) scale(.75); }
 .envelope-stage.is-open .envelope { transform: translateY(13px); }
