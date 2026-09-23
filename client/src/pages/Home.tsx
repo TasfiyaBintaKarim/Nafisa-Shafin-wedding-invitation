@@ -5,7 +5,6 @@ import {
   ArrowUpRight,
   CalendarDays,
   Check,
-  ChevronRight,
   Clock3,
   Flower2,
   Heart,
@@ -171,15 +170,6 @@ export default function Home() {
             <div className="gather-note"><Flower2 size={18} strokeWidth={1.25} /><p>Come in your favorite festive attire. Your presence, blessings, and warm wishes will make our celebration complete.</p></div>
           </div>
         </div>
-      </section>
-
-      <section className="closing-section">
-        <div className="closing-ornament"><span /><Seal /><span /></div>
-        <SectionKicker>We saved you a seat</SectionKicker>
-        <h2>Will you join us?</h2>
-        <p>Your presence will make our day even more special.<br />We cannot wait to celebrate with you.</p>
-        <button className="primary-button" onClick={() => setRsvpOpen(true)}>Kindly RSVP <ChevronRight size={16} /></button>
-        <div className="closing-footer"><span>Nafisa & Shafin</span><span>With love and gratitude</span><span>23 · 10 · 26</span></div>
       </section>
 
       <footer className="site-footer">
