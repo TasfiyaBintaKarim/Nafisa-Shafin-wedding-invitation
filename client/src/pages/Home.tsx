@@ -28,7 +28,7 @@ function Seal({ small = false }: { small?: boolean }) {
     <div className={`seal ${small ? "seal-small" : ""}`} aria-hidden="true">
       <span className="seal-inner">
         <Heart size={small ? 12 : 18} strokeWidth={1.55} fill="none" />
-        <span className="seal-mark">C<span>&</span>E</span>
+        <span className="seal-mark">N<span>&</span>S</span>
       </span>
     </div>
   );
