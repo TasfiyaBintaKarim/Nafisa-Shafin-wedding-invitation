@@ -71,7 +71,7 @@ export default function Home() {
       <header className="site-header">
         <a className="brand-lockup" href="#top" aria-label="Clara and Elliot home">
           <Seal small />
-          <span>Nafisa <i>&</i> Shafkat</span>
+          <span>Nafisa <i>&</i> Shafin</span>
         </a>
         <nav className={`site-nav ${menuOpen ? "nav-open" : ""}`} aria-label="Primary navigation">
           {navItems.map((item) => (
@@ -90,7 +90,7 @@ export default function Home() {
         <div className="hero-art hero-art-right" />
         <div className="hero-copy">
           <SectionKicker>A wedding invitation from</SectionKicker>
-          <h1>Nafisa <span>&</span> Shafkat</h1>
+          <h1>Nafisa <span>&</span> Shafin</h1>
           <p className="hero-subtitle">Your presence at our wedding is the greatest gift<br className="desktop-break" /> we could ask for.</p>
         </div>
 
@@ -101,7 +101,7 @@ export default function Home() {
             <div className="envelope-letter">
               <div className="letter-inner">
                 <span className="letter-eyebrow">Together with their families</span>
-                <strong>Nafisa <em>&</em> Shafkat</strong>
+                <strong>Nafisa <em>&</em> Shafin</strong>
                 <span className="letter-date">23 · 10 · 2026</span>
                 <div className="letter-rule" />
                 <span className="letter-place">Anando Bhaban · Dhaka</span>
@@ -135,7 +135,7 @@ export default function Home() {
             <h2>A little gathering<br /><i>for a lifetime of love.</i></h2>
             <p>Your presence at our wedding is the greatest gift we could ask for. Thank you for being a part of our special day and for sharing in the joy, love, and memories we will cherish forever.</p>
             <div className="intro-signoff"><span>With love,</span><strong>N & S</strong></div>
-            <div className="family-note"><span>The couple</span><strong>Nafisa Fairooz & Shafkat Nazrul Shafib</strong><span className="family-blessings-label">With the blessings of</span><strong>Omar Faruk Chowdhury & Israt Chowdhury</strong><strong>Late Dr MD Nazrul Islam & Shahnaz Begum</strong></div>
+            <div className="family-note"><span>The couple</span><strong>Nafisa Fairooz & Shafin Nazrul Shafib</strong><span className="family-blessings-label">With the blessings of</span><strong>Omar Faruk Chowdhury & Israt Chowdhury</strong><strong>Late Dr MD Nazrul Islam & Shahnaz Begum</strong></div>
           </div>
           <div className="details-card reveal-up">
             <div className="card-badge"><Sparkles size={15} /> You’re invited</div>
@@ -200,11 +200,11 @@ export default function Home() {
         <h2>Will you join us?</h2>
         <p>Your presence will make our day even more special.<br />We cannot wait to celebrate with you.</p>
         <button className="primary-button" onClick={() => setRsvpOpen(true)}>Kindly RSVP <ChevronRight size={16} /></button>
-        <div className="closing-footer"><span>Nafisa & Shafkat</span><span>With love and gratitude</span><span>23 · 10 · 26</span></div>
+        <div className="closing-footer"><span>Nafisa & Shafin</span><span>With love and gratitude</span><span>23 · 10 · 26</span></div>
       </section>
 
       <footer className="site-footer">
-        <div className="footer-brand"><Seal small /><span>Nafisa <i>&</i> Shafkat</span></div>
+        <div className="footer-brand"><Seal small /><span>Nafisa <i>&</i> Shafin</span></div>
         <span>Made with love for our favorite people.</span>
         <a href="#top">Back to top <ArrowUp size={13} /></a>
       </footer>
