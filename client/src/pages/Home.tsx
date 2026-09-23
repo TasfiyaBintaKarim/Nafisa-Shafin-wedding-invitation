@@ -6,7 +6,6 @@ import {
   CalendarDays,
   Check,
   Clock3,
-  Flower2,
   Heart,
   MapPin,
   Menu,
@@ -18,7 +17,6 @@ import {
 
 const navItems = [
   { label: "The day", href: "#details" },
-  { label: "Gather", href: "#gather" },
 ];
 
 function Seal({ small = false }: { small?: boolean }) {
@@ -150,24 +148,6 @@ export default function Home() {
               <div><span className="detail-label">Where</span><strong>Anando Bhaban</strong><small>55 Purana Paltan Lane · VIP Road · Dhaka 1000</small></div>
             </div>
             <a className="text-link" href="https://maps.google.com/?q=Anando+Bhaban,+55+Purana+Paltan+Lane,+Dhaka" target="_blank" rel="noreferrer">Get directions <ArrowUpRight size={14} /></a>
-          </div>
-        </div>
-      </section>
-
-      <section id="gather" className="gather-section paper-section">
-        <div className="container gather-inner">
-          <div className="gather-heading reveal-up">
-            <SectionKicker>Come as you are</SectionKicker>
-            <h2>Meet us<br /><i>under the trees.</i></h2>
-          </div>
-          <div className="gather-content reveal-up">
-            <div className="timeline">
-              <div className="timeline-item"><span>07:00</span><div><strong>Wedding celebration</strong><small>Join us as the evening begins</small></div></div>
-              <div className="timeline-item"><span>07:30</span><div><strong>Family blessings</strong><small>A gathering of two families</small></div></div>
-              <div className="timeline-item"><span>08:30</span><div><strong>Dinner & memories</strong><small>Good food, stories, and celebration</small></div></div>
-              <div className="timeline-item"><span>10:00</span><div><strong>Joyful send-off</strong><small>Thank you for sharing our day</small></div></div>
-            </div>
-            <div className="gather-note"><Flower2 size={18} strokeWidth={1.25} /><p>Come in your favorite festive attire. Your presence, blessings, and warm wishes will make our celebration complete.</p></div>
           </div>
         </div>
       </section>
