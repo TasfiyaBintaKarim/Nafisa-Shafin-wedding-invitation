@@ -19,7 +19,6 @@ import {
 
 const navItems = [
   { label: "The day", href: "#details" },
-  { label: "Our story", href: "#story" },
   { label: "Gather", href: "#gather" },
 ];
 
@@ -152,26 +151,6 @@ export default function Home() {
               <div><span className="detail-label">Where</span><strong>Anando Bhaban</strong><small>55 Purana Paltan Lane · VIP Road · Dhaka 1000</small></div>
             </div>
             <a className="text-link" href="https://maps.google.com/?q=Anando+Bhaban,+55+Purana+Paltan+Lane,+Dhaka" target="_blank" rel="noreferrer">Get directions <ArrowUpRight size={14} /></a>
-          </div>
-        </div>
-      </section>
-
-      <section id="story" className="story-section">
-        <div className="story-frame" />
-        <div className="container story-layout">
-          <div className="story-image-wrap reveal-up">
-            <div className="story-image-placeholder">
-              <div className="story-stamp">Est.<br /><strong>2018</strong></div>
-              <span className="story-caption">A Sunday kind of love</span>
-            </div>
-            <div className="image-note">The first of many walks home.</div>
-          </div>
-          <div className="story-copy reveal-up">
-            <SectionKicker>Our story</SectionKicker>
-            <h2>Somewhere between<br /><i>hello</i> and always.</h2>
-            <p>Two families, two hearts, and one beautiful promise. We are delighted to begin this new chapter surrounded by the people who have filled our lives with love and meaning.</p>
-            <p>We would be honoured to have you with us as we celebrate this special day in Dhaka.</p>
-            <div className="story-signature">N <span>♡</span> S</div>
           </div>
         </div>
       </section>
