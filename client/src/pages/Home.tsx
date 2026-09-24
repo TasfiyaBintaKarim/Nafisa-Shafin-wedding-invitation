@@ -9,8 +9,6 @@ import {
   Heart,
   MapPin,
   Menu,
-  Music2,
-  Pause,
   Sparkles,
   X,
 } from "lucide-react";
@@ -45,7 +43,6 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [rsvpOpen, setRsvpOpen] = useState(false);
   const [rsvpSent, setRsvpSent] = useState(false);
-  const [playing, setPlaying] = useState(false);
 
   const openInvitation = () => {
     setOpened(true);
@@ -65,7 +62,7 @@ export default function Home() {
   return (
     <main className="invitation-site">
       <header className="site-header">
-        <a className="brand-lockup" href="#top" aria-label="Clara and Elliot home">
+        <a className="brand-lockup" href="#top" aria-label="Nafisa and Shafin home">
           <Seal small />
           <span>Nafisa <i>&</i> Shafin</span>
         </a>
@@ -120,10 +117,6 @@ export default function Home() {
           <span>23rd October</span>
           <span className="footer-dot" />
           <span>Dhaka, Bangladesh</span>
-          <button className="sound-toggle" onClick={() => setPlaying((value) => !value)} aria-label={playing ? "Pause ambient music" : "Play ambient music"}>
-            {playing ? <Pause size={13} /> : <Music2 size={13} />}
-            <span>{playing ? "pause" : "sound on"}</span>
-          </button>
         </div>
       </section>
 
@@ -134,7 +127,7 @@ export default function Home() {
             <h2>A little gathering<br /><i>for a lifetime of love.</i></h2>
             <p>Your presence at our wedding is the greatest gift we could ask for. Thank you for being a part of our special day and for sharing in the joy, love, and memories we will cherish forever.</p>
             <div className="intro-signoff"><span>With love,</span><strong>N & S</strong></div>
-            <div className="family-note"><span>The couple</span><strong>Nafisa Fairooz & Shafin Nazrul Shafib</strong><span className="family-blessings-label">With the blessings of</span><strong>Omar Faruk Chowdhury & Israt Chowdhury</strong><strong>Late Dr MD Nazrul Islam & Shahnaz Begum</strong></div>
+            <div className="family-note"><span>The couple</span><strong>Nafisa Fairooz & Shafkat Nazrul Shafin</strong><span className="family-blessings-label">With the blessings of</span><strong>Omar Faruk Chowdhury & Israt Chowdhury</strong><strong>Late Dr MD Nazrul Islam & Shahnaz Begum</strong></div>
           </div>
           <div className="details-card reveal-up">
             <div className="card-badge"><Sparkles size={15} /> You’re invited</div>
