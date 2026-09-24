@@ -82,6 +82,9 @@ export default function Home() {
 
       <section id="top" className={`hero ${opened ? "hero-opened" : ""}`}>
         <div className="hero-grain" />
+        <div className="floating-particles" aria-hidden="true">
+          <span /><span /><span /><span /><span /><span /><span /><span />
+        </div>
         <div className="hero-art hero-art-left" />
         <div className="hero-art hero-art-right" />
         <div className="hero-copy">

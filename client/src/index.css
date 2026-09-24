@@ -84,6 +84,16 @@ a { color: inherit; text-decoration: none; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: radial-gradient(circle at 50% 42%, rgba(143, 73, 74, .34), transparent 37%), linear-gradient(120deg, #481b26, #6e2b36 52%, #451a25); }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .12; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); pointer-events: none; }
 .hero-grain { position: absolute; inset: 0; z-index: -1; opacity: .15; background: linear-gradient(115deg, transparent 25%, rgba(248,239,216,.12) 25.1%, transparent 25.5%, transparent 70%, rgba(248,239,216,.08) 70.2%, transparent 70.7%); background-size: 9px 9px; mix-blend-mode: overlay; animation: grain-drift 12s steps(2, end) infinite; }
+.floating-particles { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.floating-particles span { position: absolute; display: block; width: 5px; height: 8px; border-radius: 70% 15% 70% 15%; background: rgba(242, 225, 195, .42); opacity: 0; animation: particle-drift 9s ease-in-out infinite; }
+.floating-particles span:nth-child(1) { left: 14%; top: 62%; animation-delay: -1s; transform: rotate(28deg) scale(.65); }
+.floating-particles span:nth-child(2) { left: 23%; top: 35%; animation-delay: -5s; transform: rotate(-18deg) scale(.45); }
+.floating-particles span:nth-child(3) { left: 31%; top: 73%; animation-delay: -7s; transform: rotate(42deg) scale(.8); }
+.floating-particles span:nth-child(4) { right: 22%; top: 29%; animation-delay: -3s; transform: rotate(-32deg) scale(.55); }
+.floating-particles span:nth-child(5) { right: 14%; top: 69%; animation-delay: -8s; transform: rotate(19deg) scale(.72); }
+.floating-particles span:nth-child(6) { right: 31%; top: 61%; animation-delay: -4s; transform: rotate(55deg) scale(.4); }
+.floating-particles span:nth-child(7) { left: 40%; top: 19%; animation-delay: -6s; transform: rotate(-20deg) scale(.5); }
+.floating-particles span:nth-child(8) { right: 40%; top: 79%; animation-delay: -2s; transform: rotate(35deg) scale(.6); }
 .hero-art { position: absolute; z-index: -1; width: 250px; height: 420px; opacity: .12; background: url("/manus-storage/olive-letterhead_ee3fb46e.png") center/cover no-repeat; filter: grayscale(1) brightness(1.8); }
 .hero-art-left { left: -68px; top: 120px; transform: rotate(-15deg); }
 .hero-art-right { right: -72px; bottom: 60px; transform: rotate(165deg); }
@@ -226,6 +236,7 @@ a { color: inherit; text-decoration: none; }
 @keyframes prompt-float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(5px); } }
 @keyframes prompt-fade { to { opacity: 0; transform: translateX(-50%) translateY(8px); } }
 @keyframes grain-drift { 0%, 100% { background-position: 0 0; } 25% { background-position: 7px -5px; } 50% { background-position: -4px 6px; } 75% { background-position: 6px 3px; } }
+@keyframes particle-drift { 0%, 100% { opacity: 0; transform: translate3d(0, 18px, 0) rotate(0deg) scale(.7); } 20%, 72% { opacity: .72; } 50% { opacity: .42; transform: translate3d(16px, -38px, 0) rotate(70deg) scale(1); } }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
 @media (max-width: 760px) {
