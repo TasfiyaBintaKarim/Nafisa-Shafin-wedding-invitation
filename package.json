@@ -10,8 +10,9 @@
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write .",
-    "build:client": "node -e \"process.env.GITHUB_PAGES='1'; import('vite').then(m=>m.build())\"",
-    "deploy": "pnpm run build:client && gh-pages -d dist/public --dist-branch gh-pages --message \"Deploy static site to GitHub Pages\""
+    "build:client": "node -e \"process.env.GITHUB_PAGES=process.env.GITHUB_PAGES||'1'; import('vite').then(m=>m.build())\"",
+    "deploy": "pnpm run build:client && gh-pages -d dist/public --dist-branch gh-pages --message \"Deploy static site to GitHub Pages\"",
+    "vercel-build": "node -e \"process.env.GITHUB_PAGES=''; import('vite').then(m=>m.build())\""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
