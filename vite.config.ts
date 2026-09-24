@@ -205,7 +205,10 @@ function vitePluginStorageProxy(): Plugin {
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
+const REPO_NAME = "Nafisa-Shafin-wedding-invitation";
+
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? `/${REPO_NAME}/` : "/",
   plugins,
   resolve: {
     alias: {
