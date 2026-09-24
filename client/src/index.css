@@ -123,7 +123,9 @@ a { color: inherit; text-decoration: none; }
 .envelope-front::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(78,95,77,.08) 4px); }
 .envelope-flap { position: absolute; z-index: 4; width: 100%; height: 100%; top: 0; left: 0; clip-path: polygon(0 0, 100% 0, 50% 57%); background: #8c3a43; transform-origin: top center; transition: transform .72s .03s cubic-bezier(.23,1,.32,1); backface-visibility: hidden; filter: drop-shadow(0 2px 1px rgba(47,25,29,.2)); }
 .envelope-flap::after { content: ""; position: absolute; inset: 0; opacity: .23; background: repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,255,255,.18) 4px); }
-.envelope-seal { position: absolute; z-index: 5; left: calc(50% - 33px); top: 130px; transition: opacity .22s .2s, transform .72s cubic-bezier(.23,1,.32,1); animation: seal-glow 3.2s 1.8s ease-in-out infinite; }
+.envelope-seal { position: absolute; z-index: 5; left: calc(50% - 33px); top: 130px; padding: 0; border: 0; background: transparent; cursor: pointer; transition: opacity .22s .2s, transform .72s cubic-bezier(.23,1,.32,1); animation: seal-glow 3.2s 1.8s ease-in-out infinite; }
+.seal-trigger:focus-visible { outline: 2px solid #f2e1c3; outline-offset: 6px; border-radius: 50%; }
+.seal-trigger:hover .seal { transform: scale(1.06) rotate(-7deg); }
 .open-prompt { position: absolute; top: 308px; bottom: auto; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 10px; color: #e1e9dc; background: transparent; font-size: 10px; text-transform: uppercase; letter-spacing: .19em; white-space: nowrap; animation: prompt-float 2.4s 2s ease-in-out infinite; }
 .open-prompt svg { transition: transform .2s ease; }
 .open-prompt:hover svg { transform: translateY(4px); }

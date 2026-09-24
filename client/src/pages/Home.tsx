@@ -95,7 +95,7 @@ export default function Home() {
 
         <div className={`envelope-stage ${opened ? "is-open" : ""}`}>
           <div className="envelope-shadow" />
-          <button className="envelope" onClick={openInvitation} aria-label="Open wedding invitation">
+          <div className="envelope">
             <div className="envelope-back" />
             <div className="envelope-letter">
               <div className="letter-inner">
@@ -108,8 +108,8 @@ export default function Home() {
             </div>
             <div className="envelope-front" />
             <div className="envelope-flap" />
-            <div className="envelope-seal"><Seal /></div>
-          </button>
+            <button className="envelope-seal seal-trigger" onClick={openInvitation} aria-label="Open the invitation from the wax seal"><Seal /></button>
+          </div>
           <button className="open-prompt" onClick={openInvitation}>
             <span>Open the invitation</span>
             <ArrowDown size={15} strokeWidth={1.5} />
